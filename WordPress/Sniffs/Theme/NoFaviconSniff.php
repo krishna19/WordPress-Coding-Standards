@@ -83,12 +83,7 @@ class WordPress_Sniffs_Theme_NoFaviconSniff implements PHP_CodeSniffer_Sniff {
 
 		$this->favicon_regex = sprintf( self::REGEX_TEMPLATE, implode( '|', $regex_parts ) );
 
-		$tokens   = PHP_CodeSniffer_Tokens::$stringTokens;
-		$tokens[] = T_INLINE_HTML;
-		$tokens[] = T_HEREDOC;
-		$tokens[] = T_NOWDOC;
-
-		return $tokens;
+		return PHP_CodeSniffer_Tokens::$textStringTokens;
 	}
 
 	/**

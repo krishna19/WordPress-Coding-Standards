@@ -31,12 +31,7 @@ class WordPress_Sniffs_Theme_NoTitleTagSniff extends WordPress_Sniff {
 	 * @return array
 	 */
 	public function register() {
-		$tokens                  = PHP_CodeSniffer_Tokens::$stringTokens;
-		$tokens[ T_INLINE_HTML ] = T_INLINE_HTML;
-		$tokens[ T_HEREDOC ]     = T_HEREDOC;
-		$tokens[ T_NOWDOC ]      = T_NOWDOC;
-
-		return $tokens;
+		return PHP_CodeSniffer_Tokens::$textStringTokens;
 	}
 
 	/**

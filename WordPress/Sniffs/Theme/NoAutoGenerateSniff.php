@@ -46,11 +46,8 @@ class WordPress_Sniffs_Theme_NoAutoGenerateSniff implements PHP_CodeSniffer_Snif
 	 * @return array
 	 */
 	public function register() {
-		$tokens   = PHP_CodeSniffer_Tokens::$stringTokens;
-		$tokens[] = T_INLINE_HTML;
-		$tokens[] = T_HEREDOC;
+		$tokens   = PHP_CodeSniffer_Tokens::$textStringTokens;
 		$tokens[] = T_STRING; // Functions named after or prefixed with the generator name.
-		$tokens[] = T_NOWDOC;
 		$tokens[] = T_COMMENT;
 		$tokens[] = T_DOC_COMMENT_STRING;
 		return $tokens;
