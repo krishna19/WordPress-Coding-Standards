@@ -102,4 +102,9 @@
 	<!-- Check for deprecated WordPress functions. -->
 	<rule ref="WordPress.WP.DeprecatedFunctions"/>
 
+	<!-- Verify that everything in the global namespace is prefixed. -->
+	<!-- Covers: https://make.wordpress.org/themes/handbook/review/required/#code - last bullet. -->
+	<!-- NOTE: this sniff needs a custom property to be set for it to be activated. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals" />
+
 </ruleset>
